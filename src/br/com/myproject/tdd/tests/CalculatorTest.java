@@ -1,6 +1,6 @@
 package br.com.myproject.tdd.tests;
 
-import br.com.myproject.tdd.classes.Calculator;
+import br.com.myproject.tdd.classes.models.Calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
