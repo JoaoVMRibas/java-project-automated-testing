@@ -1,6 +1,8 @@
 package br.com.myproject.tdd.tests;
 
 import br.com.myproject.tdd.classes.models.Employee;
+import br.com.myproject.tdd.classes.models.Performance;
+import br.com.myproject.tdd.classes.services.ReadjustmentService;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
