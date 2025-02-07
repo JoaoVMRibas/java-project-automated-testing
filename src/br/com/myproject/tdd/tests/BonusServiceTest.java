@@ -14,20 +14,20 @@ class BonusServiceTest {
     @Test
     void calculateEmployeeBonus() {
         Employee employee = new Employee("Pedro", LocalDate.now(),new BigDecimal("1000"));
-        BonusService bonus = new BonusService();
+        BonusService bonusService = new BonusService();
 
-        BigDecimal res = bonus.calculateBonus(employee);
+        BigDecimal bonus = bonusService.calculateBonus(employee);
 
-        assertEquals(new BigDecimal("100.0"),res);
+        assertEquals(new BigDecimal("100.0"),bonus);
     }
 
     @Test
     void calculateEmployeeBonusWhenSalaryIsHigh() {
         Employee employee = new Employee("Pedro", LocalDate.now(),new BigDecimal("12000"));
-        BonusService bonus = new BonusService();
+        BonusService bonusService = new BonusService();
 
-        BigDecimal res = bonus.calculateBonus(employee);
+        BigDecimal bonus = bonusService.calculateBonus(employee);
 
-        assertEquals(BigDecimal.ZERO,res);
+        assertEquals(BigDecimal.ZERO,bonus);
     }
 }
