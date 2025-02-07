@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class CalculatorTest {
 
     @Test
-    public void sumOfTwoPositiveNumbers(){
+    void sumOfTwoPositiveNumbers(){
         Calculator calculator = new Calculator();
         int res = calculator.add(3, 7);
 
@@ -15,7 +15,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void sumOfPositiveNumberAndZero(){
+    void sumOfPositiveNumberAndZero(){
         Calculator calculator = new Calculator();
         int res = calculator.add(3, 0);
 
@@ -23,7 +23,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void sumOfPositiveNumberAndNegativeNumber(){
+    void sumOfPositiveNumberAndNegativeNumber(){
         Calculator calculator = new Calculator();
         int res = calculator.add(6, -2);
 
