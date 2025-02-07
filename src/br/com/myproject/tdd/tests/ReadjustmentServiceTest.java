@@ -15,10 +15,30 @@ public class ReadjustmentServiceTest {
     @Test
     void threePercentReadjustmentWhenPerformanceIsUnsatisfactory(){
         ReadjustmentService readjustmentService = new ReadjustmentService();
-        Employee employee = new Employee("Rodrigo", LocalDate.now(),new BigDecimal("3000"));
+        Employee employee = new Employee("Rodrigo", LocalDate.now(),new BigDecimal("1000"));
 
         readjustmentService.calculateReadjustment(employee, Performance.UNSATISFACTORY);
 
-        assertEquals(new BigDecimal("3090.00"),employee.getSalary());
+        assertEquals(new BigDecimal("1030.00"),employee.getSalary());
+    }
+
+    @Test
+    void threePercentReadjustmentWhenPerformanceIsGood(){
+        ReadjustmentService readjustmentService = new ReadjustmentService();
+        Employee employee = new Employee("Rodrigo", LocalDate.now(),new BigDecimal("1000"));
+
+        readjustmentService.calculateReadjustment(employee, Performance.GOOD);
+
+        assertEquals(new BigDecimal("1150.00"),employee.getSalary());
+    }
+
+    @Test
+    void threePercentReadjustmentWhenPerformanceIsExcellent(){
+        ReadjustmentService readjustmentService = new ReadjustmentService();
+        Employee employee = new Employee("Rodrigo", LocalDate.now(),new BigDecimal("1000"));
+
+        readjustmentService.calculateReadjustment(employee, Performance.EXCELLENT);
+
+        assertEquals(new BigDecimal("1200.00"),employee.getSalary());
     }
 }
