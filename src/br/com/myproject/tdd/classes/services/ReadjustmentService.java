@@ -7,15 +7,7 @@ import java.math.BigDecimal;
 
 public class ReadjustmentService {
     public void calculateReadjustment(Employee employee, Performance performance) {
-        if(performance == Performance.UNSATISFACTORY){
-            BigDecimal readjustment = employee.getSalary().multiply(new BigDecimal("0.03"));
-            employee.readjustSalary(readjustment);
-        }else if (performance == Performance.GOOD) {
-            BigDecimal readjustment = employee.getSalary().multiply(new BigDecimal("0.15"));
-            employee.readjustSalary(readjustment);
-        }else if (performance == Performance.EXCELLENT) {
-            BigDecimal readjustment = employee.getSalary().multiply(new BigDecimal("0.2"));
-            employee.readjustSalary(readjustment);
-        }
+        BigDecimal readjustment = employee.getSalary().multiply(performance.adjustmentPercentage());
+        employee.readjustSalary(readjustment);
     }
 }
