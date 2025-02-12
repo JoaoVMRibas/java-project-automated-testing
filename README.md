@@ -23,3 +23,6 @@ BDD is more about user behavior and making sure the system does what the busines
 
 ## JUnit
 JUnit is a **testing framework** for Java that helps developers write and run automated tests. It is mainly used for unit testing, which means testing small parts of the code (like methods and classes) to make sure they work correctly.
+
+## Selenium
+Selenium for Java is a tool that helps automate web browsers. It allows you to write Java code to control a browser, just like a human would—clicking buttons, filling out forms, navigating pages, and more. Developers and testers use Selenium to check if a website works as expected by simulating real user actions.
